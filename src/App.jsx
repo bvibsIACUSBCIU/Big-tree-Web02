@@ -5,145 +5,145 @@ import { Clock, MapPin, Link as LinkIcon, Briefcase, Radio, Users, Zap, MessageS
 
 // --- 多语言内容 (保持不变) ---
 const translations = {
-  en: {
-    navHome: "Home",
-    navService: "Service",
-    navAMA: "AMA",
-    navEvent: "Event",
-    contactUs: "Contact Us",
-    heroTitle: "We are not just a media",
-    heroSubtitle: "but also a node connector for you to move towards the future.",
-    exposure: "Exposure",
-    kols: "KOLs",
-    cases: "Cases",
-    serviceOverview: "Service Overview",
-    services: [
-        "Bilingual Twitter Space Interviews", "Customized Web3 Business Trips", "Compliance Consulting and Support",
-        "Web3 Industry Summit", "Full-process Project Incubation Services", "Platform Token Issuance and Listing Support"
-    ],
-    detailedServices: [
-        { title: "Bilingual Twitter Space Interviews", description: "TreeFinance leverages the advantages of X Space voice live streaming and, through collaboration with KOLs, media, and communities to create an efficient closed loop from ‘exposure → traffic → conversion,’ helping brands quickly build awareness, amplify their presence, and engage more closely with communities and potential users." },
-        { title: "Customized business trips", description: "TreeFinance excels at integrating industry conferences with offlineresources, organizing domestic and international Web3-themed businesstrips that combine inspections, networking, and content creation to fostelstronger industry connections and collaboration opportunities. Currentroutes include the Mamba Route (Africa), Bali (Indonesia), and Nha Trang(Vietnam)." },
-        { title: "Compliance licensing consulting and support", description: "TreeFinance precisely matches license types to business scenarios basedon relevant regulations. Our expert team provides end-to-end support,ensuring compliance with personnel and technical requirements. We tailorcompliance strategies, including risk assessment, and systemdevelopment.Our process encompasses initial consultation, customizedsolutions, document preparation, filing coordination, and ongoing supportThese efficient services help businesses navigate compliance challengesand advance Web3 adoption." },
-        { title: "Web3 Industry Summit", description: "TreeFinance customizes high-end blockchain summits domestically andinternationally, connecting partners with project teams, investmentinstitutions, and global ecosystem resources to create an efficient, private,and results-driven industry exchange platform." },
-        { title: "Full-process project incubation services", description: "TreeFinance's incubation services span the entire project lifecycle, offeringthree key advantages: a comprehensive media, compliance, and resourceframework; customized solutions, and long-term support. These servicesenable startups and established projects to transform innovative ideasinto high-quality projects, driving growth and value in the Web3ecosystem." },
-        { title: "Platform token issuance and inclusion support", description: "Our listing services include matching with trading platforms, pre.qualification, coaching, coordination, communication, and post-listing support.Indexing services cover multiple authoritative platforms. optimizing materials, filing, and maintaining information. This service offers three key advantages: extensive resource networks, professional compliance oversight, and integrated listing and dissemination support. These streamline processes, reduce costs, and enhance efficiency, helping startups and established projects integrate into the Web3 ecosystem, boosting asset liquidity and brand visibility" }
-    ],
-    resources: [
-        { title: "Project Collaboration", description: "Serving and managing over 80 Web3 projects, providing targeted operational guidance, GameFi & DeFi Alpha strategies, and more." },
-        { title: "Media Resources", description: "Committee with over 200 Chinese and English media outlets, covering all blockchain-focused media channels." },
-        { title: "KOL Resources", description: "Partnered with over 200 top Web3 KOLs and community influencers, providing in-depth overseas project promotion." },
-        { title: "Event Resources", description: "We have established extensive connections in Hong Kong, Japan, Korea, and more, capable of hosting various online and offline events, including closed-door meetings and summits." },
-        { title: "Community Users", description: "More than 30 owned and partnered communities, reaching over 100,000 users." },
-    ],
-    amaTitle: "AMA",
-        amaEvents: [
-                {
-                    title: "Trust Game of On-Chain Oracles: How to Make Blockchain Perceive the Real World?",
-                    date: "September 7 8:00pm UTC+8",
-                    location: "123 Main Street, Apt 48, Anytown, CA 90210, USA",
-                    language: 'Chinese',
-                    listeningVolume: '19W',
-                    listeningLink: 'https://x.com/i/spaces/1yNGabzBWevJj',
-                    image: 'ama-event/ama-event-1.jpg'
-                },
-                {
-                    title: "Memecoin Momentum: Harnessing AI to Boost Trading Volume and Community Engagement",
-                    date: "September 17 8:00pm UTC+8",
-                    location: "123 Main Street, Apt 48, Anytown, CA 90210, USA",
-                    language: 'English',
-                    listeningVolume: '13.3W',
-                    listeningLink: 'https://x.com/i/spaces/1BdxYZmLwDYKX',
-                    image: 'ama-event/ama-event-2.jpg'
-                }
+    en: {
+        navHome: "Home",
+        navService: "Service",
+        navAMA: "AMA",
+        navEvent: "Event",
+        contactUs: "Contact Us",
+        heroTitle: "We are not just a media",
+        heroSubtitle: "but also a node connector for you to move towards the future.",
+        exposure: "Exposure",
+        kols: "KOLs",
+        cases: "Cases",
+        serviceOverview: "Service Overview",
+        services: [
+                "Bilingual Twitter Space Interviews", "Customized Web3 Business Trips", "Compliance Consulting and Support",
+                "Web3 Industry Summit", "Full-process Project Incubation Services", "Platform Token Issuance and Listing Support"
         ],
-    amaPhotoWall: "AMA Photo Wall",
-    labelLanguage: 'Language:',
-    labelListeningVolume: 'Listening volume:',
-    labelListeningLink: 'Listening link:',
-    videoReview: "Video review of China tour",
-    footerTitle: "We're creating new possibilities\nfor Web3.",
-    footerButtonX: "@TreefinanceCN",
-    footerButtonTG: "@TreefinanceCN",
-  },
-  cn: {
-    navHome: "首页",
-    navService: "服务",
-    navAMA: "AMA",
-    navEvent: "活动",
-    contactUs: "联系我们",
-    heroTitle: "我们不仅仅是媒体",
-    heroSubtitle: "更是您迈向未来的节点连接器。",
-    exposure: "曝光量",
-    kols: "KOLs",
-    cases: "合作案例",
-    serviceOverview: "服务总览",
-    services: [
-        "双语 Twitter Space 访谈", "定制化 Web3 商务差旅", "合规咨询与支持",
-        "Web3 行业峰会", "全流程项目孵化服务", "平台代币发行与上市支持"
-    ],
-    detailedServices: [
-    {
-      title: "双语 Twitter Space 访谈",
-      description: "TreeFinance 利用 X Space 语音直播优势，通过与 KOL、媒体和社区的合作，打造“曝光 → 流量 → 转化”的高效闭环，帮助品牌快速建立知名度，扩大影响力，并与社区和潜在用户建立更紧密的联系。"
-    },
-    {
-      title: "定制化商务考察",
-      description: "TreeFinance 擅长将行业会议与线下资源相结合，组织国内外 Web3 主题商务考察，将考察、交流和内容创作融为一体，以促进更强的行业联系和合作机会。当前路线包括 Mamba 路线（非洲）、巴厘岛（印度尼西亚）和芽庄（越南）。"
-    },
-    {
-      title: "合规牌照咨询与支持",
-      description: "TreeFinance 根据相关法规，精准匹配牌照类型与业务场景。我们的专家团队提供端到端的支持，确保符合人员和技术要求。我们量身定制合规策略，包括风险评估和系统开发。我们的流程涵盖初步咨询、定制解决方案、文件准备、备案协调和持续支持。这些高效服务帮助企业应对合规挑战，推动 Web3 的普及。"
-    },
-    {
-      title: "Web3 行业峰会",
-      description: "TreeFinance 在国内外定制高端区块链峰会，将合作伙伴与项目团队、投资机构和全球生态系统资源连接起来，打造一个高效、私密、以结果为导向的行业交流平台。"
-    },
-    {
-      title: "全流程项目孵化服务",
-      description: "TreeFinance 的孵化服务涵盖整个项目生命周期，提供三大核心优势：全面的媒体、合规和资源框架；定制化解决方案；以及长期支持。这些服务使初创公司和成熟项目能够将创新理念转化为高质量项目，推动 Web3 生态系统的增长和价值。"
-    },
-    {
-      title: "平台代币发行与收录支持",
-      description: "我们的上市服务包括与交易平台的匹配、预审、辅导、协调、沟通和上市后支持。收录服务涵盖多个权威平台，优化材料、备案和信息维护。该服务提供三大核心优势：广泛的资源网络、专业的合规监督以及集成的上市和传播支持。这些服务简化了流程，降低了成本，提高了效率，帮助初创公司和成熟项目融入 Web3 生态系统，提升资产流动性和品牌知名度。"
-    }   ],
-    resources: [
-        { title: "项目合作", description: "服务和管理超过80个Web3项目，提供有针对性的运营指导、GameFi & DeFi Alpha策略等。" },
-        { title: "媒体资源", description: "与超过200家中英文媒体建立合作，覆盖所有专注于区块链的媒体渠道。" },
-        { title: "KOL 资源", description: "与超过200位顶尖Web3 KOL和社区影响者合作，提供深度的海外项目推广。" },
-        { title: "活动资源", description: "我们在香港、日本、韩国等地建立了广泛的联系，能够举办各种线上线下活动，包括闭门会议和峰会。" },
-        { title: "社区用户", description: "拥有并合作超过30个社区，覆盖用户超过10万。" },
-    ],
-    amaTitle: "AMA",
-        amaEvents: [
-                {
-                    title: "链上预言机的信任博弈：区块链如何感知现实世界？",
-                    date: "9月7日晚8:00（UTC+8）",
-                    location: "美国加州洛杉矶市ANYTOWN主街123号48室",
-                    language: '中文',
-                    listeningVolume: '19W',
-                    listeningLink: 'https://x.com/i/spaces/1yNGabzBWevJj',
-                    image: 'ama-event/ama-event-1.jpg'
-                },
-                {
-                    title: "Memecoin 势头：利用人工智能提升交易量和社区参与度",
-                    date: "9月17日晚8:00（UTC+8）",
-                    location: "美国加州洛杉矶市ANYTOWN主街123号48室",
-                    language: '英文',
-                    listeningVolume: '13.3W',
-                    listeningLink: 'https://x.com/i/spaces/1BdxYZmLwDYKX',
-                    image: 'ama-event/ama-event-2.jpg'
-                }
+        detailedServices: [
+                { title: "Bilingual Twitter Space Interviews", description: "TreeFinance leverages the advantages of X Space voice live streaming and, through collaboration with KOLs, media, and communities to create an efficient closed loop from 'exposure → traffic → conversion,' helping brands quickly build awareness, amplify their presence, and engage more closely with communities and potential users." },
+                { title: "Customized business trips", description: "TreeFinance excels at integrating industry conferences with offline resources, organizing domestic and international Web3-themed business trips that combine inspections, networking, and content creation to foster stronger industry connections and collaboration opportunities. Current routes include the Mamba Route (Africa), Bali (Indonesia), and Nha Trang (Vietnam)." },
+                { title: "Compliance licensing consulting and support", description: "TreeFinance precisely matches license types to business scenarios based on relevant regulations. Our expert team provides end-to-end support, ensuring compliance with personnel and technical requirements. We tailor compliance strategies, including risk assessment, and system development. Our process encompasses initial consultation, customized solutions, document preparation, filing coordination, and ongoing support. These efficient services help businesses navigate compliance challenges and advance Web3 adoption." },
+                { title: "Web3 Industry Summit", description: "TreeFinance customizes high-end blockchain summits domestically and internationally, connecting partners with project teams, investment institutions, and global ecosystem resources to create an efficient, private, and results-driven industry exchange platform." },
+                { title: "Full-process project incubation services", description: "TreeFinance's incubation services span the entire project lifecycle, offering three key advantages: a comprehensive media, compliance, and resource framework; customized solutions; and long-term support. These services enable startups and established projects to transform innovative ideas into high-quality projects, driving growth and value in the Web3 ecosystem." },
+                { title: "Platform token issuance and inclusion support", description: "Our listing services include matching with trading platforms, pre-qualification, coaching, coordination, communication, and post-listing support. Indexing services cover multiple authoritative platforms, optimizing materials, filing, and maintaining information. This service offers three key advantages: extensive resource networks, professional compliance oversight, and integrated listing and dissemination support. These streamline processes, reduce costs, and enhance efficiency, helping startups and established projects integrate into the Web3 ecosystem, boosting asset liquidity and brand visibility" }
         ],
-    amaPhotoWall: "AMA 照片墙",
-    labelLanguage: '语言：',
-    labelListeningVolume: '收听量：',
-    labelListeningLink: '收听链接：',
-    videoReview: "中国行视频回顾",
-    footerTitle: "我们正在为 Web3\n创造新的可能性。",
-    footerButtonX: "@TreefinanceCN",
-    footerButtonTG: "@TreefinanceCN",
-  }
+        resources: [
+                { title: "Project Collaboration", description: "Serving and managing over 80 Web3 projects, providing targeted operational guidance, GameFi & DeFi Alpha strategies, and more." },
+                { title: "Media Resources", description: "Committee with over 200 Chinese and English media outlets, covering all blockchain-focused media channels." },
+                { title: "KOL Resources", description: "Partnered with over 200 top Web3 KOLs and community influencers, providing in-depth overseas project promotion." },
+                { title: "Event Resources", description: "We have established extensive connections in Hong Kong, Japan, Korea, and more, capable of hosting various online and offline events, including closed-door meetings and summits." },
+                { title: "Community Users", description: "More than 30 owned and partnered communities, reaching over 100,000 users." },
+        ],
+        amaTitle: "AMA",
+                amaEvents: [
+                                {
+                                        title: "Trust Game of On-Chain Oracles: How to Make Blockchain Perceive the Real World?",
+                                        date: "September 7 8:00pm UTC+8",
+                                        location: "123 Main Street, Apt 48, Anytown, CA 90210, USA",
+                                        language: 'Chinese',
+                                        listeningVolume: '19W',
+                                        listeningLink: 'https://x.com/i/spaces/1yNGabzBWevJj',
+                                        image: 'ama-event/ama-event-1.jpg'
+                                },
+                                {
+                                        title: "Memecoin Momentum: Harnessing AI to Boost Trading Volume and Community Engagement",
+                                        date: "September 17 8:00pm UTC+8",
+                                        location: "123 Main Street, Apt 48, Anytown, CA 90210, USA",
+                                        language: 'English',
+                                        listeningVolume: '13.3W',
+                                        listeningLink: 'https://x.com/i/spaces/1BdxYZmLwDYKX',
+                                        image: 'ama-event/ama-event-2.jpg'
+                                }
+                ],
+        amaPhotoWall: "AMA Photo Wall",
+        labelLanguage: 'Language:',
+        labelListeningVolume: 'Listening volume:',
+        labelListeningLink: 'Listening link:',
+        videoReview: "Video review of China tour",
+        footerTitle: "We're creating new possibilities\nfor Web3.",
+        footerButtonX: "@TreefinanceCN",
+        footerButtonTG: "@TreefinanceCN",
+    },
+    cn: {
+        navHome: "Home",
+        navService: "服务",
+        navAMA: "AMA",
+        navEvent: "活动",
+        contactUs: "联系我们",
+        heroTitle: "我们不仅仅是媒体",
+        heroSubtitle: "更是您迈向未来的节点连接器。",
+        exposure: "曝光量",
+        kols: "KOLs",
+        cases: "合作案例",
+        serviceOverview: "服务总览",
+        services: [
+                "双语 Twitter Space 访谈", "定制化 Web3 商务差旅", "合规咨询与支持",
+                "Web3 行业峰会", "全流程项目孵化服务", "平台代币发行与上市支持"
+        ],
+        detailedServices: [
+        {
+            title: "双语 Twitter Space 访谈",
+            description: "TreeFinance 利用 X Space 语音直播优势，通过与 KOL、媒体和社区的合作，打造“曝光 → 流量 → 转化”的高效闭环，帮助品牌快速建立知名度，扩大影响力，并与社区和潜在用户建立更紧密的联系。"
+        },
+        {
+            title: "定制化商务考察",
+            description: "TreeFinance 擅长将行业会议与线下资源相结合，组织国内外 Web3 主题商务考察，将考察、交流和内容创作融为一体，以促进更强的行业联系和合作机会。当前路线包括 Mamba 路线（非洲）、巴厘岛（印度尼西亚）和芽庄（越南）。"
+        },
+        {
+            title: "合规牌照咨询与支持",
+            description: "TreeFinance 根据相关法规，精准匹配牌照类型与业务场景。我们的专家团队提供端到端的支持，确保符合人员和技术要求。我们量身定制合规策略，包括风险评估和系统开发。我们的流程涵盖初步咨询、定制解决方案、文件准备、备案协调和持续支持。这些高效服务帮助企业应对合规挑战，推动 Web3 的普及。"
+        },
+        {
+            title: "Web3 行业峰会",
+            description: "TreeFinance 在国内外定制高端区块链峰会，将合作伙伴与项目团队、投资机构和全球生态系统资源连接起来，打造一个高效、私密、以结果为导向的行业交流平台。"
+        },
+        {
+            title: "全流程项目孵化服务",
+            description: "TreeFinance 的孵化服务涵盖整个项目生命周期，提供三大核心优势：全面的媒体、合规和资源框架；定制化解决方案；以及长期支持。这些服务使初创公司和成熟项目能够将创新理念转化为高质量项目，推动 Web3 生态系统的增长和价值。"
+        },
+        {
+            title: "平台代币发行与收录支持",
+            description: "我们的上市服务包括与交易平台的匹配、预审、辅导、协调、沟通和上市后支持。收录服务涵盖多个权威平台，优化材料、备案和信息维护。该服务提供三大核心优势：广泛的资源网络、专业的合规监督以及集成的上市和传播支持。这些服务简化了流程，降低了成本，提高了效率，帮助初创公司和成熟项目融入 Web3 生态系统，提升资产流动性和品牌知名度。"
+        }   ],
+        resources: [
+                { title: "项目合作", description: "服务和管理超过80个Web3项目，提供有针对性的运营指导、GameFi & DeFi Alpha策略等。" },
+                { title: "媒体资源", description: "与超过200家中英文媒体建立合作，覆盖所有专注于区块链的媒体渠道。" },
+                { title: "KOL 资源", description: "与超过200位顶尖Web3 KOL和社区影响者合作，提供深度的海外项目推广。" },
+                { title: "活动资源", description: "我们在香港、日本、韩国等地建立了广泛的联系，能够举办各种线上线下活动，包括闭门会议和峰会。" },
+                { title: "社区用户", description: "拥有并合作超过30个社区，覆盖用户超过10万。" },
+        ],
+        amaTitle: "AMA",
+                amaEvents: [
+                                {
+                                        title: "链上预言机的信任博弈：区块链如何感知现实世界？",
+                                        date: "9月7日晚8:00（UTC+8）",
+                                        location: "美国加州洛杉矶市ANYTOWN主街123号48室",
+                                        language: '中文',
+                                        listeningVolume: '19W',
+                                        listeningLink: 'https://x.com/i/spaces/1yNGabzBWevJj',
+                                        image: 'ama-event/ama-event-1.jpg'
+                                },
+                                {
+                                        title: "Memecoin 势头：利用人工智能提升交易量和社区参与度",
+                                        date: "9月17日晚8:00（UTC+8）",
+                                        location: "美国加州洛杉矶市ANYTOWN主街123号48室",
+                                        language: '英文',
+                                        listeningVolume: '13.3W',
+                                        listeningLink: 'https://x.com/i/spaces/1BdxYZmLwDYKX',
+                                        image: 'ama-event/ama-event-2.jpg'
+                                }
+                ],
+        amaPhotoWall: "AMA 照片墙",
+        labelLanguage: '语言：',
+        labelListeningVolume: '收听量：',
+        labelListeningLink: '收听链接：',
+        videoReview: "中国行视频回顾",
+        footerTitle: "我们正在为 Web3\n创造新的可能性。",
+        footerButtonX: "@TreefinanceCN",
+        footerButtonTG: "@TreefinanceCN",
+    }
 };
 
 // --- 动画变体定义 ---
@@ -163,7 +163,7 @@ const AnimatedSection = ({ children, className = '', id = '' }) => {
   );
 };
 
-// 可复用的区块背景（来自 home 的光斑样式）
+// 可复用的区块背景（增强版多光团）
 const SectionBg = ({ styleOverrides = {} }) => (
     <div style={{
         position: 'absolute',
@@ -175,31 +175,93 @@ const SectionBg = ({ styleOverrides = {} }) => (
         pointerEvents: 'none',
         ...styleOverrides.container,
     }}>
+        {/* 主大绿光团 */}
         <div style={{
             position: 'absolute',
-            left: '5%',
-            top: '10%',
-            width: 420,
-            height: 420,
+            left: '3%',
+            top: '6%',
+            width: 480,
+            height: 480,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, #22c55e 60%, #e6ed93 100%)',
-            opacity: 0.35,
-            filter: 'blur(80px)',
+            background: 'radial-gradient(circle at 30% 30%, #22c55e 40%, #b7e17a 65%, #e6ed93 100%)',
+            opacity: 0.36,
+            filter: 'blur(92px)',
+            transform: 'translateZ(0)',
             zIndex: 0,
             ...styleOverrides.blob1,
         }} />
+        {/* 右上黄绿渐变光团 */}
         <div style={{
             position: 'absolute',
-            right: '0%',
-            top: '0%',
-            width: 320,
-            height: 320,
+            right: '4%',
+            top: '2%',
+            width: 340,
+            height: 340,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, #4ade80 60%, #bbf7d0 100%)',
-            opacity: 0.25,
-            filter: 'blur(60px)',
+            background: 'radial-gradient(circle at 70% 30%, #4ade80 45%, #c7f7b9 75%, rgba(255,255,220,0.9) 100%)',
+            opacity: 0.26,
+            filter: 'blur(64px)',
+            transform: 'translateZ(0)',
             zIndex: 0,
             ...styleOverrides.blob2,
+        }} />
+        {/* 中下漂浮绿黄光团 */}
+        <div className="floating-blob" style={{
+            position: 'absolute',
+            left: '20%',
+            bottom: '8%',
+            width: 360,
+            height: 360,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle at 40% 60%, #9be15d 20%, #dbeaa3 60%, rgba(255,248,220,0.95) 100%)',
+            opacity: 0.22,
+            filter: 'blur(72px)',
+            zIndex: 0,
+            mixBlendMode: 'screen',
+            ...styleOverrides.blob3,
+        }} />
+        {/* 右下漂浮淡绿光团 */}
+        <div className="floating-blob slow" style={{
+            position: 'absolute',
+            right: '18%',
+            bottom: '18%',
+            width: 260,
+            height: 260,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle at 60% 40%, #6ee7b7 30%, #f5f7c3 75%)',
+            opacity: 0.18,
+            filter: 'blur(56px)',
+            zIndex: 0,
+            mixBlendMode: 'screen',
+            ...styleOverrides.blob4,
+        }} />
+        {/* 新增左下角小黄绿光团 */}
+        <div className="floating-blob fast" style={{
+            position: 'absolute',
+            left: '8%',
+            bottom: '10%',
+            width: 180,
+            height: 180,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle at 60% 60%, #e6ed93 40%, #bbf7d0 100%)',
+            opacity: 0.13,
+            filter: 'blur(40px)',
+            zIndex: 0,
+            mixBlendMode: 'screen',
+        }} />
+        {/* 新增顶部中央淡黄光团 */}
+        <div className="floating-blob" style={{
+            position: 'absolute',
+            left: '40%',
+            top: '-6%',
+            width: 220,
+            height: 220,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle at 50% 30%, #f7f7b9 40%, #e6ed93 100%, transparent 100%)',
+            opacity: 0.10,
+            filter: 'blur(60px)',
+            zIndex: 0,
+            mixBlendMode: 'screen',
         }} />
     </div>
 );
@@ -220,11 +282,16 @@ const Header = ({ language, setLanguage, t }) => {
         <header className="fixed top-0 left-0 right-0 z-50 py-3 px-4 md:px-8 lg:px-12 bg-white/30 backdrop-blur-lg border-b border-white/20">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <div className="flex items-center">
-                    <img src="/logo.png" alt="Tree Finance Logo" className="h-10 w-auto" />
+                    <img
+                        src={language === 'cn' ? '/logo3.png' : '/logo1.png'}
+                        alt="Tree Finance Logo"
+                        className="h-12 w-auto transition-transform duration-300"
+                        style={{ transform: 'scale(4)' }}
+                    />
                 </div>
                 <nav className="hidden md:flex items-center space-x-8">
                     {navLinks.map((link) => (
-                        <a key={link.key} href={link.href} className="text-gray-700 hover:text-green-600 transition-colors duration-300 font-medium relative group text-base">
+                        <a key={link.key} href={link.href} className="text-gray-700 hover:text-green-600 transition-colors duration-300 font-medium relative group text-lg md:text-xl lg:text-2xl">
                             {t[link.key]}
                             <span className="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
@@ -233,9 +300,9 @@ const Header = ({ language, setLanguage, t }) => {
                 <div className="hidden md:flex items-center space-x-4">
                     <button onClick={toggleLanguage} aria-label="切换语言" className="flex items-center text-gray-700 hover:text-green-600 transition-colors bg-transparent px-3 py-2 rounded-full border border-gray-300/50 hover:border-green-400/50">
                         <Globe size={20} />
-                        <span className="ml-2 font-medium text-sm">{language === 'en' ? 'EN' : 'CN'}</span>
+                        <span className="ml-2 font-medium text-sm md:text-base">{language === 'en' ? 'EN' : 'CN'}</span>
                     </button>
-                    <motion.a href="https://t.me/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-green-500/20" whileHover={{ scale: 1.05, y: -2 }}>
+                    <motion.a href="https://t.me/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-green-500/20 text-sm md:text-base" whileHover={{ scale: 1.05, y: -2 }}>
                         {t.contactUs}
                     </motion.a>
                 </div>
@@ -248,9 +315,9 @@ const Header = ({ language, setLanguage, t }) => {
             {isMenuOpen && (
                 <motion.div className="md:hidden absolute top-full left-0 w-full bg-white/80 backdrop-blur-md shadow-lg py-4" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
                     <nav className="flex flex-col items-center space-y-4">
-                        {navLinks.map((link) => <a key={link.key} href={link.href} className="text-gray-700 hover:text-green-600 transition-colors duration-300 font-medium" onClick={() => setIsMenuOpen(false)}>{t[link.key]}</a>)}
-                        <button onClick={toggleLanguage} className="text-gray-700 font-medium">{language === 'en' ? '切换到中文' : 'Switch to English'}</button>
-                        <motion.a href="https://t.me/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-6 py-2 rounded-full" whileHover={{ scale: 1.05 }}>{t.contactUs}</motion.a>
+                        {navLinks.map((link) => <a key={link.key} href={link.href} className="text-gray-700 hover:text-green-600 transition-colors duration-300 font-medium text-lg" onClick={() => setIsMenuOpen(false)}>{t[link.key]}</a>)}
+                        <button onClick={toggleLanguage} className="text-gray-700 font-medium text-base">{language === 'en' ? '切换到中文' : 'Switch to English'}</button>
+                        <motion.a href="https://t.me/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-6 py-2 rounded-full text-base" whileHover={{ scale: 1.05 }}>{t.contactUs}</motion.a>
                     </nav>
                 </motion.div>
             )}
@@ -258,46 +325,85 @@ const Header = ({ language, setLanguage, t }) => {
     );
 };
 
+
 const HeroSection = ({ t }) => (
-        <AnimatedSection id="home" className="pt-36 pb-16 md:pt-48 md:pb-24">
-            <div className="container mx-auto px-4 relative z-10">
-              <SectionBg />
-              <div className="relative z-10">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="text-center md:text-left">
-                            <motion.h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight" variants={itemVariants}>{t.heroTitle}</motion.h1>
-                            <motion.p className="mt-4 text-xl md:text-2xl text-gray-600 font-medium" variants={itemVariants}>{t.heroSubtitle}</motion.p>
-                            <motion.div className="mt-12 flex justify-center md:justify-start space-x-8 md:space-x-12" variants={containerVariants}>
-                                <motion.div variants={itemVariants} className="text-center"><p className="text-4xl font-bold text-green-500">10M</p><p className="text-gray-500 mt-1">{t.exposure}</p></motion.div>
-                                <motion.div variants={itemVariants} className="text-center"><p className="text-4xl font-bold text-green-500">300+</p><p className="text-gray-500 mt-1">{t.kols}</p></motion.div>
-                                <motion.div variants={itemVariants} className="text-center"><p className="text-4xl font-bold text-green-500">80+</p><p className="text-gray-500 mt-1">{t.cases}</p></motion.div>
-                            </motion.div>
-                        </div>
-                        <motion.div className="relative flex justify-center items-center h-full" variants={itemVariants}>
-                            <img src="/hero-graphic.png" alt="Tree Finance 3D Graphic" className="w-full max-w-sm md:max-w-md transform transition-transform duration-500 hover:scale-105 drop-shadow-2xl" />
+    <AnimatedSection id="home" className="pt-10 pb-16 md:pt-36 md:pb-20">
+        <div className="container mx-auto px-4 relative z-10">
+            <SectionBg />
+            <div className="relative z-10">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                    {/* 修改：扩大文本容器宽度，禁止换行，允许与图片重叠 */}
+                    <div
+                        className="text-center md:text-left"
+                        style={{
+                            maxWidth: 'none',
+                            width: '200%',
+                            whiteSpace: 'nowrap',
+                            overflow: 'visible',
+                            zIndex: 2,
+                            position: 'relative',
+                        }}
+                    >
+                        <motion.h1
+                            className="text-6xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0"
+                            style={{
+                                maxWidth: 'none',
+                                width: '100%',
+                                minWidth: '320px',
+                                letterSpacing: '0.01em',
+                                wordBreak: 'normal',
+                                whiteSpace: 'nowrap',
+                                overflow: 'visible',
+                            }}
+                            variants={itemVariants}
+                        >
+                            {t.heroTitle}
+                        </motion.h1>
+                        <motion.p
+                            className="mt-4 text-xl md:text-2xl text-gray-600 font-medium"
+                            style={{
+                                whiteSpace: 'nowrap',
+                                overflow: 'visible',
+                                maxWidth: 'none',
+                            }}
+                            variants={itemVariants}
+                        >
+                            {t.heroSubtitle}
+                        </motion.p>
+                        <motion.div className="mt-12 flex justify-center md:justify-start space-x-8 md:space-x-12" variants={containerVariants}>
+                            <motion.div variants={itemVariants} className="text-center"><p className="text-4xl font-bold text-green-500">10M</p><p className="text-gray-500 mt-1">{t.exposure}</p></motion.div>
+                            <motion.div variants={itemVariants} className="text-center"><p className="text-4xl font-bold text-green-500">300+</p><p className="text-gray-500 mt-1">{t.kols}</p></motion.div>
+                            <motion.div variants={itemVariants} className="text-center"><p className="text-4xl font-bold text-green-500">80+</p><p className="text-gray-500 mt-1">{t.cases}</p></motion.div>
                         </motion.div>
                     </div>
+                    <motion.div className="relative flex justify-center items-center h-full" variants={itemVariants}>
+                        <img src="/hero-graphic.png" alt="Tree Finance 3D Graphic" className="w-full max-w-sm md:max-w-md transform transition-transform duration-500 hover:scale-105 drop-shadow-2xl" />
+                    </motion.div>
                 </div>
             </div>
-        </AnimatedSection>
+        </div>
+    </AnimatedSection>
 );
+
 
 const ServiceOverview = ({ t }) => (
         <AnimatedSection id="service">
             <div className="container mx-auto px-4 text-center relative z-10">
               <SectionBg />
               <div className="relative z-10">
-                    <motion.h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-lime-400 mb-8" variants={itemVariants}>{t.serviceOverview}</motion.h2>
+                    <motion.h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 mb-8 leading-tight mx-auto md:mx-0" variants={itemVariants}>{t.serviceOverview}</motion.h2>
                     <motion.div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center" variants={containerVariants}>
                         {t.services.map((service, index) => (
                             <motion.div 
                                 key={index} 
-                                className="service-card relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex items-center justify-center"
+                                className="service-card glass-strong relative overflow-hidden transition-all duration-300 hover:shadow-3xl hover:-translate-y-2 flex items-center justify-center"
                                 variants={cardVariants}
+                                style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 2px 8px 0 rgba(34,197,94,0.10)', backdropFilter: 'blur(32px) saturate(180%)', border: '1.5px solid rgba(255,255,255,0.7)' }}
                             >
-                                <div className="inner-bg absolute inset-0 rounded-2xl"></div>
+                                <div className="inner-bg absolute inset-0 rounded-2xl" style={{ background: 'radial-gradient(circle at top left, rgba(34, 197, 94, 0.25), transparent 80%)', filter: 'blur(48px)', opacity: 0.85 }}></div>
                                 <div className="z-10 p-6 text-center">
-                                    <p className="text-base md:text-sm lg:text-base font-semibold text-green-800">{service}</p>
+                                    {/* 使用黑色文字，使服务名称更加清晰可读 */}
+                                    <p className="text-base md:text-sm lg:text-base font-semibold text-black drop-shadow-lg">{service}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -316,10 +422,15 @@ const ResourcesSection = ({ t }) => {
                   <div className="relative z-10">
                         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8" variants={containerVariants}>
                             {t.resources.map((item, index) => (
-                                <motion.div key={index} className="glass-card p-6 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" variants={cardVariants}>
-                                    <div className="text-green-600 mb-4 bg-white/70 p-4 rounded-full shadow-inner">{icons[index]}</div>
-                                    <h3 className="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                                <motion.div
+                                    key={index}
+                                    className="glass-card glass-strong p-6 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:shadow-3xl hover:-translate-y-2"
+                                    variants={cardVariants}
+                                    style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 2px 8px 0 rgba(34,197,94,0.10)', backdropFilter: 'blur(32px) saturate(180%)', border: '1.5px solid rgba(255,255,255,0.7)' }}
+                                >
+                                    <div className="text-green-600 mb-4 bg-white/70 p-4 rounded-full shadow-inner" style={{ boxShadow: '0 4px 16px 0 rgba(34,197,94,0.10)' }}>{icons[index]}</div>
+                                    <h3 className="text-lg font-bold text-gray-800 mb-2 drop-shadow-lg">{item.title}</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed drop-shadow">{item.description}</p>
                                 </motion.div>
                             ))}
                         </motion.div>
@@ -348,14 +459,38 @@ const DetailedServiceSection = ({ t }) => (
                         <span className="absolute -left-12 -top-12 text-9xl font-extrabold text-gray-200/40 select-none -z-10">
                             0{index + 1}
                         </span>
-                        <div className={`flex justify-center items-center ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                        <div className={`flex justify-center items-center relative ${index % 2 === 1 ? 'md:order-2' : ''}`}> 
+                            {/* 动态绿色光晕 */}
+                            <span 
+                                className="absolute left-1/2 -translate-x-1/2 bottom-0 pointer-events-none"
+                                style={{
+                                    width: '80%',
+                                    height: '36%',
+                                    zIndex: 0,
+                                    filter: 'blur(32px)',
+                                    opacity: 0.7,
+                                    background: 'radial-gradient(ellipse at 50% 80%, #22c55e 0%, #bbf7d0 60%, transparent 100%)',
+                                    animation: `haloGlow 2.8s ease-in-out infinite alternate`,
+                                    display: 'block',
+                                    borderRadius: '50% 50% 80% 80%/60% 60% 100% 100%',
+                                }}
+                            />
                             <motion.img 
                                 src={`/service-icons/icon-${index + 1}.png`}
                                 alt={service.title}
-                                className="w-48 h-48 md:w-64 md:h-64 object-contain filter drop-shadow-2xl"
+                                className="w-48 h-48 md:w-64 md:h-64 object-contain filter drop-shadow-2xl relative z-10"
                                 whileHover={{ scale: 1.1, rotate: 5 }}
                                 transition={{ type: "spring", stiffness: 300 }}
                             />
+                            {/* 动态光晕动画样式 */}
+                            {index === 0 && (
+                                <style>{`
+                                    @keyframes haloGlow {
+                                        0% { opacity: 0.7; filter: blur(32px) brightness(1.1); transform: translateX(-50%) scaleX(1) scaleY(1); }
+                                        100% { opacity: 1; filter: blur(48px) brightness(1.3); transform: translateX(-50%) scaleX(1.08) scaleY(1.12); }
+                                    }
+                                `}</style>
+                            )}
                         </div>
                         <div className={`relative ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                              <div className="relative">
@@ -454,100 +589,87 @@ const AmaSection = ({ t, language }) => {
 };
 
 const VideoReview = ({ t }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [currentVideo, setCurrentVideo] = useState(null);
-    
-    // 本地视频文件数组
-    const videos = Array.from({ length: 9 }, (_, i) => ({
+    // 视频数据
+    const videos = Array.from({ length: 11 }, (_, i) => ({
         id: i + 1,
-        src: `videos/video${i + 1}.mp4`,
-        poster: `videos/video${i + 1}-poster.jpg` // 可选的封面图片
+        src: `videos/V/video${i + 1}.mp4`,
+        poster: `videos/P/video${i + 1}-poster.png`
     }));
-
     const duplicatedVideos = [...videos, ...videos];
-
-    const openVideoModal = (video) => {
-        setCurrentVideo(video);
-        setIsModalOpen(true);
-    };
-
-    const closeVideoModal = () => {
-        setIsModalOpen(false);
-        setCurrentVideo(null);
-    };
-
+    // 当前播放索引
+    const [playingIdx, setPlayingIdx] = useState(null);
+    const videoRefs = React.useRef([]);
+    // 预加载封面
+    useEffect(() => {
+        const preloaders = videos.map(v => {
+            const img = new window.Image();
+            img.src = v.poster;
+            return img;
+        });
+        return () => { preloaders.forEach(img => { img.src = ''; }); };
+    }, []);
+    // 自动播放
+    useEffect(() => {
+        if (playingIdx !== null && videoRefs.current[playingIdx]) {
+            videoRefs.current[playingIdx].play();
+        }
+    }, [playingIdx]);
     return (
         <AnimatedSection id="event">
             <div className="container mx-auto px-4 text-center relative z-10">
                 <SectionBg />
-                <motion.h2 className="text-4xl font-bold text-green-700" variants={itemVariants}>{t.videoReview}</motion.h2>
+                <motion.h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0" variants={itemVariants}>{t.videoReview}</motion.h2>
                 <div className="mt-12 w-full relative group overflow-hidden" style={{ maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}>
                     <div className="flex animate-scroll-normal group-hover:[animation-play-state:paused]">
                         {duplicatedVideos.map((video, i) => (
-                            <div 
-                                key={`a-${i}`} 
-                                className="w-80 h-48 mx-4 my-4 rounded-2xl overflow-hidden shadow-xl flex-shrink-0 transition-transform duration-300 hover:scale-105 cursor-pointer"
-                                onClick={() => openVideoModal(video)}
+                            <div
+                                key={`a-${i}`}
+                                className="w-80 h-48 mx-4 my-4 rounded-2xl overflow-hidden shadow-xl flex-shrink-0 transition-transform duration-300 hover:scale-105 cursor-pointer relative group"
+                                onClick={() => setPlayingIdx(i)}
                             >
-                                {video.poster ? (
-                                    <img 
-                                        src={video.poster} 
-                                        alt={`Video ${video.id} Thumbnail`} 
-                                        className="w-full h-full object-cover"
+                                {playingIdx === i ? (
+                                    <video
+                                        ref={el => videoRefs.current[i] = el}
+                                        src={video.src}
+                                        poster={video.poster}
+                                        className="w-full h-full object-cover rounded-2xl"
+                                        controls
+                                        autoPlay
+                                        onClick={e => e.stopPropagation()}
+                                        onEnded={() => setPlayingIdx(null)}
                                     />
                                 ) : (
-                                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                                        <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                                            </svg>
+                                    <>
+                                        <img
+                                            src={video.poster}
+                                            alt={`Video ${video.id} Thumbnail`}
+                                            className="w-full h-full object-cover rounded-2xl"
+                                        />
+                                        {/* 固定显示播放按钮 */}
+                                        <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 transition-opacity pointer-events-none">
+                                            <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fillRule="evenodd" d="M6.5 5.5v9l7-4.5-7-4.5z" clipRule="evenodd" />
+                                                </svg>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </>
                                 )}
-                                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 hover:opacity-100 transition-opacity">
-                                    <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                                        </svg>
-                                    </div>
-                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-
-            {/* 视频播放模态框 */}
-            {isModalOpen && currentVideo && (
-                <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4" onClick={closeVideoModal}>
-                    <div className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
-                        <button 
-                            className="absolute -top-12 right-0 text-white text-3xl hover:text-gray-300"
-                            onClick={closeVideoModal}
-                        >
-                            ×
-                        </button>
-                        <video 
-                            className="w-full rounded-lg"
-                            controls
-                            autoPlay
-                        >
-                            <source src={currentVideo.src} type="video/mp4" />
-                            您的浏览器不支持视频标签。
-                        </video>
-                    </div>
-                </div>
-            )}
         </AnimatedSection>
     );
 };
 
 
 const Footer = ({ t }) => (
-    <AnimatedSection className="text-center pb-24">
-        <div className="container mx-auto px-4 relative z-10">
+    <AnimatedSection className="min-h-screen flex items-center justify-center pb-24">
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
             <SectionBg />
-            <motion.h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-lime-500 whitespace-pre-line" variants={itemVariants}>
+            <motion.h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0" variants={itemVariants}>
                 {t.footerTitle}
             </motion.h2>
             <motion.div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6" variants={containerVariants}>
@@ -568,105 +690,193 @@ const Footer = ({ t }) => (
     </AnimatedSection>
 );
 
-function App() {
-  const [language, setLanguage] = useState('en');
-  const t = translations[language];
 
-  return (
-    <div>
-      <style>{`
-        :root {
-            --green-50:  #f0fdf4;
-            --green-100: #dcfce7;
-            --green-200: #bbf7d0;
-            --green-300: #86efac;
-            --green-400: #4ade80;
-            --green-500: #22c55e;
-            --green-600: #16a34a;
-            --lime-200:  #e6ed93;
-            font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        html, body, #root {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
-        }
-
-        /* 玻璃质感卡片 */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(20px) saturate(150%);
-            -webkit-backdrop-filter: blur(20px) saturate(150%);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-
-        /* 页脚按钮 */
-        .footer-button {
-            display: inline-flex;
-            align-items: center;
-            font-weight: 600;
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            background: rgba(230, 247, 238, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
-            transition: all 0.3s ease-in-out;
-        }
-        .footer-button:hover {
-            background: rgba(209, 250, 229, 0.8);
-            box-shadow: 0 10px 15px -3px rgba(16,185,129,0.1), 0 4px 6px -4px rgba(16,185,129,0.1);
-        }
-        .footer-button span {
-            margin-left: 0.75rem;
-        }
-
-        /* 无限滚动动画 */
-        @keyframes scroll-normal {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
-        @keyframes scroll-reverse {
-            from { transform: translateX(-50%); }
-            to { transform: translateX(0); }
-        }
-        .animate-scroll-normal {
-            display: flex;
-            width: max-content;
-            animation: scroll-normal 60s linear infinite;
-        }
-        .animate-scroll-reverse {
-            display: flex;
-            width: max-content;
-            animation: scroll-reverse 60s linear infinite;
-        }
-      `}</style>
-      {/* 背景粒子光团，随内容滚动 */}
-      <div style={{ position: 'relative', minHeight: '100vh' }}>
-
-        <div className="relative z-10 font-sans">
-          <Header language={language} setLanguage={setLanguage} t={t} />
-          <main>
-            <HeroSection t={t} />
-            <ServiceOverview t={t} />
-            <ResourcesSection t={t} />
-            <DetailedServiceSection t={t} />
-            <AmaSection t={t} language={language} />
-            <VideoReview t={t} />
-            <Footer t={t} />
-          </main>
+// 全局动态光团背景组件
+const DynamicBlobsBg = ({ count = 10 }) => {
+    const [blobs, setBlobs] = useState([]);
+    useEffect(() => {
+        // 随机生成光团参数
+        const newBlobs = Array.from({ length: count }).map(() => {
+            const size = Math.random() * 320 + 30; // 120~440px
+            const left = Math.random() * 90;
+            const top = Math.random() * 80;
+            const colorType = Math.random();
+            // 绿、绿黄、黄绿
+            let bg;
+            if (colorType < 0.4) {
+                bg = 'radial-gradient(circle at 50% 50%, #22c55e 40%, #03f803ff 80%, transparent 100%)';
+            } else if (colorType < 0.7) {
+                bg = 'radial-gradient(circle at 60% 40%, #278e05ff 30%, #22c55e 80%, transparent 100%)';
+            } else {
+                bg = 'radial-gradient(circle at 50% 50%, #0ae754ff 30%, #5bf408ff 80%, transparent 100%)';
+            }
+            const opacity = 0.10 + Math.random() * 0.22;
+            const blur = Math.round(size * (0.18 + Math.random() * 0.5));
+            const duration = 18 + Math.random() * 18;
+            const delay = Math.random() * 10;
+            return { size, left, top, bg, opacity, blur, duration, delay };
+        });
+        setBlobs(newBlobs);
+    }, [count]);
+    return (
+        <div style={{
+            position: 'fixed',
+            left: 0,
+            top: 0,
+            width: '100vw',
+            height: '100vh',
+            zIndex: 0,
+            pointerEvents: 'none',
+            overflow: 'hidden',
+        }}>
+            {blobs.map((b, i) => (
+                <div key={i}
+                    style={{
+                        position: 'absolute',
+                        left: `${b.left}%`,
+                        top: `${b.top}%`,
+                        width: b.size,
+                        height: b.size,
+                        borderRadius: '50%',
+                        background: b.bg,
+                        opacity: b.opacity,
+                        filter: `blur(${b.blur}px)`,
+                        mixBlendMode: 'screen',
+                        animation: `blobMove${i} ${b.duration}s ease-in-out ${b.delay}s infinite alternate`,
+                        transition: 'all 1.2s cubic-bezier(.4,0,.2,1)',
+                    }}
+                />
+            ))}
+            <style>{`
+                ${blobs.map((b, i) => `
+                    @keyframes blobMove${i} {
+                        0% { transform: translateY(0) scale(1); }
+                        100% { transform: translateY(${Math.random() * 60 - 30}px) scale(${0.85 + Math.random() * 0.4}); }
+                    }
+                `).join('')}
+            `}</style>
         </div>
-      </div>
-    </div>
-  );
+    );
+};
+
+function App() {
+    const [language, setLanguage] = useState('en');
+    const t = translations[language];
+
+    return (
+        <div>
+            <style>{`
+                :root {
+                        --green-50:  #f0fdf4;
+                        --green-100: #dcfce7;
+                        --green-200: #bbf7d0;
+                        --green-300: #86efac;
+                        --green-400: #4ade80;
+                        --green-500: #22c55e;
+                        --green-600: #16a34a;
+                        --lime-200:  #e6ed93;
+                        font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                }
+                html, body, #root {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                }
+                body {
+                        background: linear-gradient(180deg, #e6f9ea 0%, #f7f7d2 100%);
+                }
+                .glass-card {
+                        background: rgba(255, 255, 255, 0.4);
+                        backdrop-filter: blur(20px) saturate(150%);
+                        -webkit-backdrop-filter: blur(20px) saturate(150%);
+                        border: 1px solid rgba(255, 255, 255, 0.6);
+                }
+                .footer-button {
+                        display: inline-flex;
+                        align-items: center;
+                        font-weight: 600;
+                        color: #374151;
+                        padding: 0.75rem 1.5rem;
+                        border-radius: 9999px;
+                        background: rgba(230, 247, 238, 0.6);
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+                        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+                        transition: all 0.3s ease-in-out;
+                }
+                .footer-button:hover {
+                        background: rgba(209, 250, 229, 0.8);
+                        box-shadow: 0 10px 15px -3px rgba(16,185,129,0.1), 0 4px 6px -4px rgba(16,185,129,0.1);
+                }
+                .footer-button span {
+                        margin-left: 0.75rem;
+                }
+                @keyframes scroll-normal {
+                        from { transform: translateX(0); }
+                        to { transform: translateX(-50%); }
+                }
+                @keyframes scroll-reverse {
+                        from { transform: translateX(-50%); }
+                        to { transform: translateX(0); }
+                }
+                .animate-scroll-normal {
+                        display: flex;
+                        width: max-content;
+                        animation: scroll-normal 60s linear infinite;
+                }
+                .animate-scroll-reverse {
+                        display: flex;
+                        width: max-content;
+                        animation: scroll-reverse 60s linear infinite;
+                }
+                .service-card {
+                        position: relative;
+                        width: 100%;
+                        background: rgba(255, 255, 255, 0.5);
+                        backdrop-filter: blur(20px) saturate(150%);
+                        -webkit-backdrop-filter: blur(20px) saturate(150%);
+                        border: 1px solid rgba(255, 255, 255, 0.6);
+                        border-radius: 1rem;
+                        overflow: hidden;
+                }
+                .service-card .inner-bg {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.35), transparent 70%);
+                        opacity: 0.7;
+                        filter: blur(40px);
+                        transition: transform 0.6s ease-out;
+                        z-index: -1;
+                }
+                .service-card:hover .inner-bg {
+                        transform: scale(1.1);
+                }
+            `}</style>
+            {/* 全局动态光团背景 */}
+            <DynamicBlobsBg count={12} />
+            <div style={{ position: 'relative', minHeight: '100vh' }}>
+                <div className="relative z-10 font-sans">
+                    <Header language={language} setLanguage={setLanguage} t={t} />
+                    <main>
+                        <HeroSection t={t} />
+                        <ServiceOverview t={t} />
+                        <ResourcesSection t={t} />
+                        <DetailedServiceSection t={t} />
+                        <AmaSection t={t} language={language} />
+                        <VideoReview t={t} />
+                        <Footer t={t} />
+                    </main>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
