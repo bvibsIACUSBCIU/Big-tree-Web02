@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Clock, MapPin, Link as LinkIcon, Briefcase, Radio, Users, Zap, MessageSquare, BarChart, X, Globe } from 'lucide-react';
@@ -180,8 +180,8 @@ const SectionBg = ({ styleOverrides = {} }) => (
             position: 'absolute',
             left: '3%',
             top: '6%',
-            width: 480,
-            height: 480,
+            width: 'min(480px, 60vw)',
+            height: 'min(480px, 60vw)',
             borderRadius: '50%',
             background: 'radial-gradient(circle at 30% 30%, #22c55e 40%, #b7e17a 65%, #e6ed93 100%)',
             opacity: 0.36,
@@ -195,8 +195,8 @@ const SectionBg = ({ styleOverrides = {} }) => (
             position: 'absolute',
             right: '4%',
             top: '2%',
-            width: 340,
-            height: 340,
+            width: 'min(340px, 50vw)',
+            height: 'min(340px, 50vw)',
             borderRadius: '50%',
             background: 'radial-gradient(circle at 70% 30%, #4ade80 45%, #c7f7b9 75%, rgba(255,255,220,0.9) 100%)',
             opacity: 0.26,
@@ -210,8 +210,8 @@ const SectionBg = ({ styleOverrides = {} }) => (
             position: 'absolute',
             left: '20%',
             bottom: '8%',
-            width: 360,
-            height: 360,
+            width: 'min(360px, 60vw)',
+            height: 'min(360px, 60vw)',
             borderRadius: '50%',
             background: 'radial-gradient(circle at 40% 60%, #9be15d 20%, #dbeaa3 60%, rgba(255,248,220,0.95) 100%)',
             opacity: 0.22,
@@ -225,8 +225,8 @@ const SectionBg = ({ styleOverrides = {} }) => (
             position: 'absolute',
             right: '18%',
             bottom: '18%',
-            width: 260,
-            height: 260,
+            width: 'min(260px, 45vw)',
+            height: 'min(260px, 45vw)',
             borderRadius: '50%',
             background: 'radial-gradient(circle at 60% 40%, #6ee7b7 30%, #f5f7c3 75%)',
             opacity: 0.18,
@@ -240,8 +240,8 @@ const SectionBg = ({ styleOverrides = {} }) => (
             position: 'absolute',
             left: '8%',
             bottom: '10%',
-            width: 180,
-            height: 180,
+            width: 'min(180px, 35vw)',
+            height: 'min(180px, 35vw)',
             borderRadius: '50%',
             background: 'radial-gradient(circle at 60% 60%, #e6ed93 40%, #bbf7d0 100%)',
             opacity: 0.13,
@@ -254,8 +254,8 @@ const SectionBg = ({ styleOverrides = {} }) => (
             position: 'absolute',
             left: '40%',
             top: '-6%',
-            width: 220,
-            height: 220,
+            width: 'min(220px, 40vw)',
+            height: 'min(220px, 40vw)',
             borderRadius: '50%',
             background: 'radial-gradient(circle at 50% 30%, #f7f7b9 40%, #e6ed93 100%, transparent 100%)',
             opacity: 0.10,
@@ -265,6 +265,8 @@ const SectionBg = ({ styleOverrides = {} }) => (
         }} />
     </div>
 );
+
+
 
 
 
@@ -279,15 +281,15 @@ const Header = ({ language, setLanguage, t }) => {
   };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 py-3 px-4 md:px-8 lg:px-12 bg-white/30 backdrop-blur-lg border-b border-white/20">
+    <header className="fixed top-0 left-0 right-0 z-50 py-2 px-4 md:px-8 lg:px-12 bg-white/30 backdrop-blur-lg border border-white/20 rounded-b-2xl">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
-                <div className="flex items-center">
-                    <img
-                        src={language === 'cn' ? '/logo3.png' : '/logo1.png'}
-                        alt="Tree Finance Logo"
-                        className="h-12 w-auto transition-transform duration-300"
-                        style={{ transform: 'scale(4)' }}
-                    />
+                    <div className="flex items-center">
+                                <img
+                                    src={language === 'cn' ? '/logo3.png' : '/logo1.png'}
+                                    alt="Tree Finance Logo"
+                                    className="h-10 md:h-[72px] w-auto transition-all duration-300"
+                                    style={{ width: 'auto', transform: 'scale(2)', transformOrigin: 'left center', display: 'inline-block' }}
+                                />
                 </div>
                 <nav className="hidden md:flex items-center space-x-8">
                     {navLinks.map((link) => (
@@ -302,7 +304,7 @@ const Header = ({ language, setLanguage, t }) => {
                         <Globe size={20} />
                         <span className="ml-2 font-medium text-sm md:text-base">{language === 'en' ? 'EN' : 'CN'}</span>
                     </button>
-                    <motion.a href="https://t.me/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-green-500/20 text-sm md:text-base" whileHover={{ scale: 1.05, y: -2 }}>
+                    <motion.a href="https://t.me/Elma_R09" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-green-500/20 text-sm md:text-base" whileHover={{ scale: 1.05, y: -2 }}>
                         {t.contactUs}
                     </motion.a>
                 </div>
@@ -313,7 +315,7 @@ const Header = ({ language, setLanguage, t }) => {
                 </div>
             </div>
             {isMenuOpen && (
-                <motion.div className="md:hidden absolute top-full left-0 w-full bg-white/80 backdrop-blur-md shadow-lg py-4" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+                <motion.div className="md:hidden absolute top-full left-0 w-full bg-white/80 backdrop-blur-md shadow-lg py-4 rounded-b-2xl" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
                     <nav className="flex flex-col items-center space-y-4">
                         {navLinks.map((link) => <a key={link.key} href={link.href} className="text-gray-700 hover:text-green-600 transition-colors duration-300 font-medium text-lg" onClick={() => setIsMenuOpen(false)}>{t[link.key]}</a>)}
                         <button onClick={toggleLanguage} className="text-gray-700 font-medium text-base">{language === 'en' ? '切换到中文' : 'Switch to English'}</button>
@@ -330,29 +332,29 @@ const HeroSection = ({ t }) => (
     <AnimatedSection id="home" className="pt-10 pb-16 md:pt-36 md:pb-20">
         <div className="container mx-auto px-4 relative z-10">
             <SectionBg />
+            {/* Particle background removed */}
             <div className="relative z-10">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* 修改：扩大文本容器宽度，禁止换行，允许与图片重叠 */}
+                    {/* Responsive hero text: allow wrapping on small screens and use responsive font sizes */}
                     <div
                         className="text-center md:text-left"
                         style={{
-                            maxWidth: 'none',
-                            width: '200%',
-                            whiteSpace: 'nowrap',
+                            maxWidth: '100%',
+                            width: '100%',
+                            whiteSpace: 'normal',
                             overflow: 'visible',
                             zIndex: 2,
                             position: 'relative',
                         }}
                     >
                         <motion.h1
-                            className="text-6xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0"
+                            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0"
                             style={{
-                                maxWidth: 'none',
+                                maxWidth: '100%',
                                 width: '100%',
-                                minWidth: '320px',
                                 letterSpacing: '0.01em',
-                                wordBreak: 'normal',
-                                whiteSpace: 'nowrap',
+                                wordBreak: 'break-word',
+                                whiteSpace: 'normal',
                                 overflow: 'visible',
                             }}
                             variants={itemVariants}
@@ -360,11 +362,11 @@ const HeroSection = ({ t }) => (
                             {t.heroTitle}
                         </motion.h1>
                         <motion.p
-                            className="mt-4 text-xl md:text-2xl text-gray-600 font-medium"
+                            className="mt-4 text-base sm:text-lg md:text-2xl text-gray-600 font-medium"
                             style={{
-                                whiteSpace: 'nowrap',
+                                whiteSpace: 'normal',
                                 overflow: 'visible',
-                                maxWidth: 'none',
+                                maxWidth: '100%',
                             }}
                             variants={itemVariants}
                         >
@@ -456,7 +458,7 @@ const DetailedServiceSection = ({ t }) => (
                         className="grid md:grid-cols-2 items-center gap-12 my-20 md:my-28 relative"
                         variants={itemVariants}
                     >
-                        <span className="absolute -left-12 -top-12 text-9xl font-extrabold text-gray-200/40 select-none -z-10">
+                        <span className="hidden md:block absolute -left-12 -top-12 text-9xl font-extrabold text-gray-200/40 select-none -z-10">
                             0{index + 1}
                         </span>
                         <div className={`flex justify-center items-center relative ${index % 2 === 1 ? 'md:order-2' : ''}`}> 
@@ -665,59 +667,132 @@ const VideoReview = ({ t }) => {
 };
 
 
-const Footer = ({ t }) => (
-    <AnimatedSection className="min-h-screen flex items-center justify-center pb-24">
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
-            <SectionBg />
-            <motion.h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0" variants={itemVariants}>
-                {t.footerTitle}
-            </motion.h2>
-            <motion.div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6" variants={containerVariants}>
-                <motion.a href="https://x.com/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="footer-button" variants={itemVariants} whileHover={{ scale: 1.05, y: -3 }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 p-1 bg-black text-white rounded-full">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                    <span>{t.footerButtonX}</span>
-                </motion.a>
-                <motion.a href="https://t.me/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="footer-button" variants={itemVariants} whileHover={{ scale: 1.05, y: -3 }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-blue-500">
-                         <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
-                    </svg>
-                    <span>{t.footerButtonTG}</span>
-                </motion.a>
-            </motion.div>
-        </div>
-    </AnimatedSection>
-);
+function Footer({ t }) {
+    const [showWeChat, setShowWeChat] = useState(false);
+    const popRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (popRef.current && !popRef.current.contains(e.target)) {
+                setShowWeChat(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const copyToClipboard = async (text) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            // small feedback could be added here (toast), but keep minimal
+        } catch (err) {
+            console.error('Copy failed', err);
+        }
+    };
+
+    return (
+        <AnimatedSection className="min-h-screen flex items-center justify-center pb-24">
+            <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
+                <SectionBg />
+                <motion.h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0" variants={itemVariants}>
+                    {t.footerTitle}
+                </motion.h2>
+                <motion.div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4" variants={containerVariants}>
+                    {/* X links: CN / EN */}
+                    <motion.div className="flex items-center gap-3" variants={itemVariants}>
+                        <motion.a href="https://x.com/TreefinanceCN" target="_blank" rel="noopener noreferrer" className="footer-button flex items-center gap-3" whileHover={{ scale: 1.05, y: -3 }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 p-1 bg-black text-white rounded-full">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                            <span className="hidden sm:inline">X CN</span>
+                        </motion.a>
+                        <motion.a href="https://x.com/TreefinanceMed" target="_blank" rel="noopener noreferrer" className="footer-button flex items-center gap-3" whileHover={{ scale: 1.05, y: -3 }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 p-1 bg-black text-white rounded-full">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                            <span className="hidden sm:inline">X EN</span>
+                        </motion.a>
+                    </motion.div>
+
+                    {/* Telegram links */}
+                    <motion.div className="flex items-center gap-3" variants={itemVariants}>
+                        <motion.a href="https://t.me/BIGBIGNONO" target="_blank" rel="noopener noreferrer" className="footer-button flex items-center gap-3" whileHover={{ scale: 1.05, y: -3 }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-blue-500">
+                                 <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                            </svg>
+                            <span className="hidden sm:inline">Martin</span>
+                        </motion.a>
+                        <motion.a href="https://t.me/Elma_R09" target="_blank" rel="noopener noreferrer" className="footer-button flex items-center gap-3" whileHover={{ scale: 1.05, y: -3 }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-blue-500">
+                                 <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                            </svg>
+                            <span className="hidden sm:inline">Elma</span>
+                        </motion.a>
+                    </motion.div>
+
+                    {/* WeChat popover */}
+                    <motion.div className="relative" variants={itemVariants} ref={popRef}>
+                        <button onClick={() => setShowWeChat(s => !s)} className="footer-button flex items-center gap-3" aria-expanded={showWeChat} aria-haspopup="true">
+                            {/* WeChat icon (simple) */}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="w-6 h-6 text-green-600" fill="currentColor">
+                                <path d="M32 6C17.664 6 6 15.82 6 28c0 4.632 2.12 8.887 5.76 12.078L10 58l18.47-8.03C30.06 51.49 31.995 52 34 52c14.336 0 26-9.82 26-22S48.336 6 34 6H32zM22 26.5c0-2.485 1.79-4.5 4-4.5s4 2.015 4 4.5S28.21 31 26 31s-4-2.515-4-4.5zM42 26.5c0-2.485 1.79-4.5 4-4.5s4 2.015 4 4.5S48.21 31 46 31s-4-2.515-4-4.5z"/>
+                            </svg>
+                            <span className="hidden sm:inline">WeChat</span>
+                        </button>
+
+                        {showWeChat && (
+                            <div className="absolute right-0 mt-3 w-56 bg-white rounded-lg shadow-lg p-3 text-left z-50" role="dialog" aria-label="WeChat IDs">
+                                <div className="flex items-center justify-between mb-2">
+                                    <div>
+                                        <div className="text-sm font-semibold">Martin</div>
+                                        <div className="text-xs text-gray-600">BTC-Martin</div>
+                                    </div>
+                                    <div>
+                                        <button onClick={() => copyToClipboard('BTC-Martin')} className="text-sm text-green-600 ml-2">Copy</button>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <div className="text-sm font-semibold">Elma</div>
+                                        <div className="text-xs text-gray-600">Elma_101D</div>
+                                    </div>
+                                    <div>
+                                        <button onClick={() => copyToClipboard('Elma_101D')} className="text-sm text-green-600 ml-2">Copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </motion.div>
+                </motion.div>
+            </div>
+        </AnimatedSection>
+    );
+}
 
 
-// 全局动态光团背景组件
-const DynamicBlobsBg = ({ count = 10 }) => {
+// 全局静态光团背景组件（去除动画以降低渲染开销，增加数量以提升视觉层次）
+const DynamicBlobsBg = ({ count = 24 }) => {
     const [blobs, setBlobs] = useState([]);
     useEffect(() => {
-        // 随机生成光团参数
+        // 随机生成光团参数（一次性静态生成）
         const newBlobs = Array.from({ length: count }).map(() => {
-            const size = Math.random() * 320 + 30; // 120~440px
-            const left = Math.random() * 90;
-            const top = Math.random() * 80;
-            const colorType = Math.random();
-            // 绿、绿黄、黄绿
-            let bg;
-            if (colorType < 0.4) {
-                bg = 'radial-gradient(circle at 50% 50%, #22c55e 40%, #03f803ff 80%, transparent 100%)';
-            } else if (colorType < 0.7) {
-                bg = 'radial-gradient(circle at 60% 40%, #278e05ff 30%, #22c55e 80%, transparent 100%)';
-            } else {
-                bg = 'radial-gradient(circle at 50% 50%, #0ae754ff 30%, #5bf408ff 80%, transparent 100%)';
-            }
-            const opacity = 0.10 + Math.random() * 0.22;
-            const blur = Math.round(size * (0.18 + Math.random() * 0.5));
-            const duration = 18 + Math.random() * 18;
-            const delay = Math.random() * 10;
-            return { size, left, top, bg, opacity, blur, duration, delay };
+            const size = Math.round(20 + Math.random() * 360); // 20 ~ 380 px
+            const left = Math.random() * 100; // 0% ~ 100%
+            const top = Math.random() * 100; // 0% ~ 100%
+            const palettes = [
+                'radial-gradient(circle at 50% 50%, #bff3c7 18%, #22c55e 55%, transparent 100%)',
+                'radial-gradient(circle at 40% 40%, #e6f9ea 12%, #86efac 48%, transparent 100%)',
+                'radial-gradient(circle at 60% 60%, #dbeaa3 10%, #4ade80 45%, transparent 100%)',
+                'radial-gradient(circle at 50% 50%, #dff9e8 8%, #9be15d 46%, transparent 100%)',
+            ];
+            const bg = palettes[Math.floor(Math.random() * palettes.length)];
+            const opacity = Number((0.06 + Math.random() * 0.22).toFixed(3));
+            const blur = Math.round(6 + Math.random() * Math.min(72, size * 0.2));
+            return { size, left, top, bg, opacity, blur };
         });
         setBlobs(newBlobs);
     }, [count]);
+
     return (
         <div style={{
             position: 'fixed',
@@ -730,7 +805,8 @@ const DynamicBlobsBg = ({ count = 10 }) => {
             overflow: 'hidden',
         }}>
             {blobs.map((b, i) => (
-                <div key={i}
+                <div
+                    key={i}
                     style={{
                         position: 'absolute',
                         left: `${b.left}%`,
@@ -742,25 +818,16 @@ const DynamicBlobsBg = ({ count = 10 }) => {
                         opacity: b.opacity,
                         filter: `blur(${b.blur}px)`,
                         mixBlendMode: 'screen',
-                        animation: `blobMove${i} ${b.duration}s ease-in-out ${b.delay}s infinite alternate`,
-                        transition: 'all 1.2s cubic-bezier(.4,0,.2,1)',
+                        transform: 'translateZ(0)'
                     }}
                 />
             ))}
-            <style>{`
-                ${blobs.map((b, i) => `
-                    @keyframes blobMove${i} {
-                        0% { transform: translateY(0) scale(1); }
-                        100% { transform: translateY(${Math.random() * 60 - 30}px) scale(${0.85 + Math.random() * 0.4}); }
-                    }
-                `).join('')}
-            `}</style>
         </div>
     );
 };
 
 function App() {
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('cn');
     const t = translations[language];
 
     return (
@@ -794,24 +861,27 @@ function App() {
                         -webkit-backdrop-filter: blur(20px) saturate(150%);
                         border: 1px solid rgba(255, 255, 255, 0.6);
                 }
-                .footer-button {
-                        display: inline-flex;
-                        align-items: center;
-                        font-weight: 600;
-                        color: #374151;
-                        padding: 0.75rem 1.5rem;
-                        border-radius: 9999px;
-                        background: rgba(230, 247, 238, 0.6);
-                        border: 1px solid rgba(255, 255, 255, 0.5);
-                        backdrop-filter: blur(10px);
-                        -webkit-backdrop-filter: blur(10px);
-                        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
-                        transition: all 0.3s ease-in-out;
-                }
-                .footer-button:hover {
-                        background: rgba(209, 250, 229, 0.8);
-                        box-shadow: 0 10px 15px -3px rgba(16,185,129,0.1), 0 4px 6px -4px rgba(16,185,129,0.1);
-                }
+        .footer-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            color: #0f172a; /* slate-900 for better contrast */
+            padding: 0.6rem 1.25rem;
+            border-radius: 12rem;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(10px) saturate(150%);
+            -webkit-backdrop-filter: blur(10px) saturate(150%);
+            box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+        }
+        .footer-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            background: rgba(255, 255, 255, 0.26);
+            box-shadow: 0 14px 30px rgba(16,24,40,0.12);
+        }
                 .footer-button span {
                         margin-left: 0.75rem;
                 }
@@ -859,19 +929,21 @@ function App() {
                         transform: scale(1.1);
                 }
             `}</style>
-            {/* 全局动态光团背景 */}
-            <DynamicBlobsBg count={12} />
+            {/* 全局光团背景（静态，数量增加以增强视觉密度） */}
+            <DynamicBlobsBg count={28} />
             <div style={{ position: 'relative', minHeight: '100vh' }}>
                 <div className="relative z-10 font-sans">
                     <Header language={language} setLanguage={setLanguage} t={t} />
                     <main>
-                        <HeroSection t={t} />
-                        <ServiceOverview t={t} />
-                        <ResourcesSection t={t} />
-                        <DetailedServiceSection t={t} />
-                        <AmaSection t={t} language={language} />
-                        <VideoReview t={t} />
-                        <Footer t={t} />
+                        <div className="pt-20 md:pt-28">
+                            <HeroSection t={t} />
+                            <ServiceOverview t={t} />
+                            <ResourcesSection t={t} />
+                            <DetailedServiceSection t={t} />
+                            <AmaSection t={t} language={language} />
+                            <VideoReview t={t} />
+                            <Footer t={t} />
+                        </div>
                     </main>
                 </div>
             </div>
