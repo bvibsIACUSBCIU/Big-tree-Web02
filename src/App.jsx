@@ -319,7 +319,7 @@ const Header = ({ language, setLanguage, t }) => {
                     <nav className="flex flex-col items-center space-y-4">
                         {navLinks.map((link) => <a key={link.key} href={link.href} className="text-gray-700 hover:text-green-600 transition-colors duration-300 font-medium text-lg" onClick={() => setIsMenuOpen(false)}>{t[link.key]}</a>)}
                         <button onClick={toggleLanguage} className="text-gray-700 font-medium text-base">{language === 'en' ? '切换到中文' : 'Switch to English'}</button>
-                        <motion.a href="https://t.me/TreeFinanceCN" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-6 py-2 rounded-full text-base" whileHover={{ scale: 1.05 }}>{t.contactUs}</motion.a>
+                        <motion.a href="https://t.me/Elma_R09" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-semibold px-6 py-2 rounded-full text-base" whileHover={{ scale: 1.05 }}>{t.contactUs}</motion.a>
                     </nav>
                 </motion.div>
             )}
@@ -348,7 +348,7 @@ const HeroSection = ({ t }) => (
                         }}
                     >
                         <motion.h1
-                            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0"
+                            className="text-6xl sm:text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400 leading-tight mx-auto md:mx-0"
                             style={{
                                 maxWidth: '100%',
                                 width: '100%',
